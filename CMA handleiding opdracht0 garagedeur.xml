@@ -1,0 +1,31 @@
+<systeembord>
+  <element name="Switch" id="Switch0" x="56" y="75"/>
+  <element name="Pulse" id="Pulse0" x="303" y="125" inputValue="1.0"/>
+  <element name="SoundSensor" id="SoundSensor0" x="206" y="378"/>
+  <element name="Buzzer" id="Buzzer0" x="28" y="378">
+    <link id="input" toElement="Switch2" toNode="output"/>
+  </element>
+  <element name="ORPort" id="ORPort0" x="843" y="68">
+    <link id="input1" toElement="Switch0" toNode="output"/>
+    <link id="input2" toElement="Counter0" toNode="output2"/>
+  </element>
+  <element name="Counter" id="Counter0" x="516" y="125">
+    <link id="reset" toElement="NOTPort0" toNode="output"/>
+    <link id="count" toElement="Pulse0" toNode="output"/>
+  </element>
+  <element name="NOTPort" id="NOTPort0" x="500" y="263">
+    <link id="input" toElement="Comparator0" toNode="output"/>
+  </element>
+  <element name="Comparator" id="Comparator0" x="303" y="263" inputValue="1.0">
+    <link id="input" toElement="SoundSensor0" toNode="output"/>
+  </element>
+  <element name="Memory" id="Memory0" x="1035" y="163">
+    <link id="set" toElement="ORPort0" toNode="output"/>
+    <link id="reset" toElement="Switch1" toNode="output"/>
+  </element>
+  <element name="Switch" id="Switch1" x="857" y="263"/>
+  <element name="LED" id="LED0" x="1203" y="192">
+    <link id="input" toElement="Memory0" toNode="output"/>
+  </element>
+  <element name="Switch" id="Switch2" x="28" y="303"/>
+</systeembord>

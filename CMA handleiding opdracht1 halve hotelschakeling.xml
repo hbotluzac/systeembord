@@ -1,0 +1,37 @@
+<systeembord>
+  <element name="Board" id="Board0" x="60" y="0"/>
+  <element name="LightSensor" id="LightSensor0" x="70" y="25"/>
+  <element name="TemperatureSensor" id="TemperatureSensor0" x="70" y="75"/>
+  <element name="SoundSensor" id="SoundSensor0" x="70" y="125"/>
+  <element name="Switch" id="Switch0" x="70" y="175"/>
+  <element name="Switch" id="Switch1" x="70" y="225"/>
+  <element name="VarVoltage" id="VarVoltage0" x="70" y="275" inputValue="0"/>
+  <element name="VarVoltage" id="VarVoltage1" x="70" y="325" inputValue="0"/>
+  <element name="Pulse" id="Pulse0" x="70" y="375" inputValue="1"/>
+  <element name="ADC" id="ADC0" x="70" y="425"/>
+  <element name="Comparator" id="Comparator0" x="230" y="25" inputValue="2.5"/>
+  <element name="Comparator" id="Comparator1" x="380" y="25" inputValue="2.5"/>
+  <element name="ANDPort" id="ANDPort0" x="230" y="125"/>
+  <element name="ANDPort" id="ANDPort1" x="380" y="125"/>
+  <element name="Memory" id="Memory0" x="230" y="225">
+    <link id="set" toElement="Switch0" toNode="output"/>
+    <link id="reset" toElement="Switch1" toNode="output"/>
+  </element>
+  <element name="ORPort" id="ORPort0" x="380" y="225"/>
+  <element name="NOTPort" id="NOTPort0" x="230" y="325"/>
+  <element name="NOTPort" id="NOTPort1" x="380" y="325"/>
+  <element name="Counter" id="Counter0" x="230" y="375"/>
+  <element name="LED" id="LED0" x="540" y="25"/>
+  <element name="LED" id="LED1" x="540" y="75"/>
+  <element name="LED" id="LED2" x="540" y="125"/>
+  <element name="LED" id="LED3" x="540" y="175">
+    <link id="input" toElement="Memory0" toNode="output"/>
+  </element>
+  <element name="LED" id="LED4" x="540" y="225"/>
+  <element name="LED" id="LED5" x="540" y="275"/>
+  <element name="Buzzer" id="Buzzer0" x="540" y="325"/>
+  <element name="Relais" id="Relais0" x="540" y="375"/>
+  <element name="Lightbulb" id="Lightbulb0" x="745" y="11"/>
+  <element name="Heater" id="Heater0" x="742" y="360"/>
+  <element name="Voltmeter" id="Voltmeter0" x="5" y="100"/>
+</systeembord>
